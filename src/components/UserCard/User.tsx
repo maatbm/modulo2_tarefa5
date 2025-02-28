@@ -1,7 +1,11 @@
 import { UserContainer } from "./style";
 import { useState, useEffect } from "react";
 
-export function User(userName: String) {
+interface UserProps {
+  userName: string;
+}
+
+export function User({ userName }: UserProps) {
   interface GitHubUser {
     name: string;
     avatar_url: string;
@@ -9,7 +13,7 @@ export function User(userName: String) {
 
   const [UserData, setUserData] = useState<GitHubUser | null>(null);
 
-  async function getUser(username: String): Promise<GitHubUser> {
+  async function getUser(username: string): Promise<GitHubUser> {
     const response = await fetch(`https://api.github.com/users/${username}`);
     const data = await response.json();
     return data;
@@ -22,7 +26,7 @@ export function User(userName: String) {
 
   useEffect(() => {
     fetchUser();
-  }, []);
+  }, [userName]);
 
   return (
     <UserContainer>

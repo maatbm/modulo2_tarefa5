@@ -9,6 +9,26 @@ export const HomeContainer = styled.div`
   align-items: center;
   background-color: ${({ theme }) => theme.colors.background};
 
+  input {
+    width: 20%;
+    height: 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: ${({ theme }) => theme.colors.background_card};
+    color: ${({ theme }) => theme.colors.text};
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid ${({ theme }) => theme.colors.border_color};
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 10px ${({ theme }) => theme.colors.shadow};
+    }
+  }
+
   button {
     width: 20%;
     height: 2rem;
