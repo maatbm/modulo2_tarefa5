@@ -7,14 +7,15 @@ export const HomeContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: ${({ theme }) => theme.colors.background};
 
   button {
     width: 20%;
     height: 2rem;
     border: none;
     border-radius: 0.5rem;
-    background-color: #000;
-    color: #fff;
+    background-color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.background};
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
@@ -22,8 +23,9 @@ export const HomeContainer = styled.div`
     transition: all 0.3s ease-in-out;
 
     &:hover {
-      background-color: #fff;
-      color: #000;
+      background-color: ${({ theme }) => theme.colors.background};
+      color: ${({ theme }) => theme.colors.text};
+      box-shadow: 0 0 10px ${({ theme }) => theme.colors.shadow};
     }
   }
 `;

@@ -9,7 +9,7 @@ export function Home() {
   return (
     <HomeContainer>
       <User />
-      <button onClick={()=>{toggleTheme()}}>Tema {theme === 'light'?'escuro':'claro'}</button>
+      <button onClick={()=>{toggleTheme()}}>Mudar para tema {theme === 'light'?'escuro':'claro'}</button>
     </HomeContainer>
   );
 }

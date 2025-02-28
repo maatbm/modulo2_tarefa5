@@ -1,7 +1,7 @@
 import { UserContainer } from "./style";
 import { useState, useEffect } from "react";
 
-export function User() {
+export function User(userName: String) {
   interface GitHubUser {
     name: string;
     avatar_url: string;
@@ -15,11 +15,12 @@ export function User() {
     return data;
   }
 
+  async function fetchUser() {
+    const data = await getUser(userName);
+    setUserData(data);
+  }
+
   useEffect(() => {
-    async function fetchUser() {
-      const data = await getUser("maatbm");
-      setUserData(data);
-    }
     fetchUser();
   }, []);
 

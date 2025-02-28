@@ -7,12 +7,13 @@ export const UserContainer = styled.div`
   justify-content: center;
   width: 100%
   height: fit-content;
-  border: 2px solid black;
+  border: 2px solid ${({ theme }) => theme.colors.border_color};
   border-radius: 1rem;
   padding: 1rem;
   gap: 1rem;
-  background-color: #f0f0f0;
-  box-shadow: 0 0 10px rgb(0, 0, 0);
+  background-color: ${({ theme }) => theme.colors.background_card};
+  box-shadow: 0 0 10px ${({ theme }) => theme.colors.shadow};
+  color: ${({ theme }) => theme.colors.text};
 
   div{
     display: flex;
