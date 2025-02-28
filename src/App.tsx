@@ -1,12 +1,9 @@
 import { AppRoutes } from "./routes/AppRoutes";
-import { ThemeProvider } from "./contexts/ThemeContext";
 
 function App() {
-  return (
-    <ThemeProvider>
-      <AppRoutes />
-    </ThemeProvider>
-  );
+  return ( 
+    <AppRoutes />
+  )
 }
 
-export default App
+export default App;

@@ -17,7 +17,7 @@ export function User() {
 
   useEffect(() => {
     async function fetchUser() {
-      const data = await getUser("Javazin99");
+      const data = await getUser("maatbm");
       setUserData(data);
     }
     fetchUser();
@@ -27,8 +27,10 @@ export function User() {
     <UserContainer>
       {UserData ? (
         <>
-          <img src={UserData.avatar_url} alt="avatar" />
-          <h1>{UserData.name}</h1>
+          <div>
+            <img src={UserData.avatar_url} alt="avatar" />
+            <h1>{UserData.name}</h1>
+          </div>
         </>
       ) : (
         <p>Aguarde um pouco</p>
